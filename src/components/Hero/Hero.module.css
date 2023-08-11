@@ -1,10 +1,11 @@
 .hero{
-    height: 270px;
+   
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+   
     
 }
 .heroWrapper{
@@ -14,6 +15,7 @@
     display: flex;
     align-items: center;
     padding: 29px 328px;
+    margin-bottom: 0px;
 }
 .text{
     display: flex;

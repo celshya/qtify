@@ -1,0 +1,19 @@
+.songCard{
+    width: 159px;
+    height:205px;
+    fill:#fff;
+    margin: 10px;
+
+}
+.cardbutton{
+    display: inline-flex;
+    padding: 4px 8px;
+    align-items: flex-start;
+    gap: 1px;
+    border-radius: 10px;
+    background: #121212; 
+    margin: 6px 0px 6px 6px;
+}
+.cardtop{
+    border-radius: 10px !important;
+}

@@ -9,7 +9,7 @@ const Hero = () => {
             <p>100 Thousand Songs, ad-free</p>
             <p>Over thousands podcast episodes</p>
             </div>
-            <img src={headphone} alt="hero image" className={styles.heroImage}/>
+            <img src={headphone} alt="hero" className={styles.heroImage}/>
         </div>
 
     </div>
