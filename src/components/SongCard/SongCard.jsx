@@ -5,9 +5,10 @@ import {
   CardMedia,
 } from "@mui/material";
 import { CardActionArea } from '@mui/material';
-import song from "../../assets/song.png"
 
-function SongCard() {
+
+function SongCard({song}) {
+
   return (
     <div className={styles.songCard}>
     <Card  className={styles.cardtop} sx={{ maxWidth: 159, maxHeight:205}}>
@@ -15,14 +16,14 @@ function SongCard() {
       <CardMedia
           component="img"
           height="170"
-          image={song}
+          image={song.image}
           alt="song"
         />
-         <div className={styles.cardbutton}><p style={{color:'white'}}>100M Follows</p></div> 
+         <div className={styles.cardbutton}><p style={{color:'white'}}>{song.follows} Follows</p></div> 
       </CardActionArea>
       
     </Card>
-    <p>New Bollywood</p>
+    <p>{song.title}</p>
     </div>
   )
 }

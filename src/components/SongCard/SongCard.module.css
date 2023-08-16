@@ -3,7 +3,7 @@
     height:205px;
     fill:#fff;
     margin: 10px;
-
+ 
 }
 .cardbutton{
     display: inline-flex;
@@ -15,5 +15,6 @@
     margin: 6px 0px 6px 6px;
 }
 .cardtop{
+    display:flex;
     border-radius: 10px !important;
 }

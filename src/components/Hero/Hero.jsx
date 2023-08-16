@@ -6,8 +6,8 @@ const Hero = () => {
     <div className={styles.hero}>
         <div className={styles.heroWrapper}>
             <div className={styles.text}>
-            <p>100 Thousand Songs, ad-free</p>
-            <p>Over thousands podcast episodes</p>
+                <p>100 Thousand Songs, ad-free</p>
+                <p>Over thousands podcast episodes</p>
             </div>
             <img src={headphone} alt="hero" className={styles.heroImage}/>
         </div>
