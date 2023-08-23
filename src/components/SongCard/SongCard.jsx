@@ -7,7 +7,7 @@ import {
 import { CardActionArea } from '@mui/material';
 
 
-function SongCard({song}) {
+function SongCard({data,type}) {
 
   return (
     <div className={styles.songCard}>
@@ -16,14 +16,14 @@ function SongCard({song}) {
       <CardMedia
           component="img"
           height="170"
-          image={song.image}
+          image={data.image}
           alt="song"
         />
-         <div className={styles.cardbutton}><p style={{color:'white'}}>{song.follows} Follows</p></div> 
+         <div className={styles.cardbutton}><p style={{color:'white'}}>{data.follows} Follows</p></div> 
       </CardActionArea>
       
     </Card>
-    <p>{song.title}</p>
+    <p>{data.title}</p>
     </div>
   )
 }
