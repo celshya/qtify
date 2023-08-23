@@ -2,7 +2,7 @@ import NavBar from "./components/Navbar/navbar";
 import Hero from "./components/Hero/Hero";
 import { useEffect,useState } from "react";
 import Section from "./components/Section/Section";
-import "./App.module.css"
+import styles from "./App.module.css"
 import Accordian from "./Accordian/Accordian";
 
 
@@ -43,7 +43,7 @@ function App({fetchTopAlbums,fetchNewAlbums}) {
 
     <NavBar/>
     <Hero/>
-    <div className="sectionWrapper">
+    <div className={styles.sectionWrapper}>
     <Section type="album" title="Top Albums" data={topAlbumData}/>
     <Section type="album" title="New Albums" data={newAlbumData}/>
     <Accordian/>
