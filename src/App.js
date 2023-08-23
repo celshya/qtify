@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import { useEffect,useState } from "react";
 import Section from "./components/Section/Section";
 import "./App.module.css"
+import Accordian from "./Accordian/Accordian";
 
 
 function App({fetchTopAlbums,fetchNewAlbums}) {
@@ -45,6 +46,7 @@ function App({fetchTopAlbums,fetchNewAlbums}) {
     <div className="sectionWrapper">
     <Section type="album" title="Top Albums" data={topAlbumData}/>
     <Section type="album" title="New Albums" data={newAlbumData}/>
+    <Accordian/>
     </div>
   </>)
  }

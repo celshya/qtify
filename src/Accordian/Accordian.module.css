@@ -1,0 +1,27 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width:1135px;
+    height: auto;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 150px 50px 150px;
+    margin: 20px 100px 30px 100px;
+    
+}
+
+.accordian{
+    width: 100% ;
+    border-radius:10px;
+    background-color:var(--color-black)!important;
+    border:solid 1px var(--color-white) !important;
+    color:var(--color-white) !important;
+}
+
+.expandIcon{
+    color: var(--color-primary);
+}
+.details{
+    background-color:var(--color-white)!important;
+}
