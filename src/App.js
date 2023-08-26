@@ -6,9 +6,10 @@ import styles from "./App.module.css"
 import Accordian from "./Accordian/Accordian";
 
 
-function App({fetchTopAlbums,fetchNewAlbums}) {
+function App({fetchTopAlbums,fetchNewAlbums,fetchSongs}) {
   const [topAlbumData,setTopAlbumData] = useState([]);
   const [newAlbumData,setNewAlbumData] = useState([]);
+  const [songsData,setSongsData] = useState([])
 
 
   const generateTopAlbumData=async()=>{
@@ -22,6 +23,20 @@ function App({fetchTopAlbums,fetchNewAlbums}) {
     }
 
   }
+
+  const generateSongsData=async()=>{
+    try{
+      const data =  await fetchSongs();
+      console.log(data)
+      setSongsData(data)
+  
+    }
+    catch(err){
+      console.error(err)
+    }
+
+  }
+ 
  
   const generateNewAlbumData=async()=>{
     try{
@@ -38,6 +53,7 @@ function App({fetchTopAlbums,fetchNewAlbums}) {
   useEffect(()=>{
     generateTopAlbumData()
     generateNewAlbumData()
+    generateSongsData()
   },[])
   return (<>
 
@@ -46,6 +62,7 @@ function App({fetchTopAlbums,fetchNewAlbums}) {
     <div className={styles.sectionWrapper}>
     <Section type="album" title="Top Albums" data={topAlbumData}/>
     <Section type="album" title="New Albums" data={newAlbumData}/>
+    <Section type="song" title="Songs" data={songsData}   />
     <Accordian/>
     </div>
   </>)

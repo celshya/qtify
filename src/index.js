@@ -5,13 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "@mui/system";
 import theme from "./theme";
-import { fetchTopAlbums,fetchNewAlbums } from "./api";
+import { fetchTopAlbums,fetchNewAlbums,fetchSongs} from "./api";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <ThemeProvider theme={theme}>
-    <App fetchTopAlbums={fetchTopAlbums} fetchNewAlbums={fetchNewAlbums}/>
+    <App fetchTopAlbums={fetchTopAlbums} fetchNewAlbums={fetchNewAlbums} fetchSongs={fetchSongs}/>
     </ThemeProvider>
   </React.StrictMode>
 );

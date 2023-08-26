@@ -22,3 +22,13 @@ export const fetchTopAlbums =async()=>{
     }
    
   }
+  export const fetchSongs =async()=>{
+    try{
+      let top = await axios.get(`${config.endpoint}/songs`)
+      return top.data;
+     
+    }
+   catch{
+    console.error("Invalid API call");
+   }
+  }

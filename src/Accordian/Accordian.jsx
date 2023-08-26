@@ -25,7 +25,7 @@ const Accordian = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion Accordion className={styles.accordian}>
+          <Accordion className={styles.accordian}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon  className={styles.expandIcon}/>}
               aria-controls="panel1a-content"

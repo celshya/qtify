@@ -4,11 +4,14 @@ import {useState} from "react"
 import styles from "./Section.module.css"
 import SongCard from '../SongCard/SongCard'
 import { Carousel } from '../Carousel/Carousel'
-const Section = ({type,title,data}) => {
+import BasicTab from '../../BasicTab/BasicTab'
+
+const Section = ({type,title,data,value,handleChange}) => {
+    
     const [carouselToggle,setcorouseltoggle]=useState(true)
     const handleToggle=()=>{
         setcorouseltoggle(!carouselToggle)
-        console.log(carouselToggle)
+        
     }
   return (
     <div >
@@ -17,6 +20,8 @@ const Section = ({type,title,data}) => {
     <h4 className={styles.toggleText} onClick={handleToggle}>{carouselToggle?"show All":"collapse All"}</h4>
 
     </div>
+    
+    {type==="song"?<BasicTab value={value} handleChange={handleChange}/>:null}
     {
         data?.length===0 ? (<CircularProgress/>):(
             <div className={styles.cardWrapper}>
